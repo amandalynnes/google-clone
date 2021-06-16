@@ -1,11 +1,7 @@
-import React from 'react'
-import './App.css';
-import Home from './pages/Home.js';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import React from "react";
+import Home from "./pages/Home.js";
+import SearchPage from "./pages/SearchPage.js";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -14,11 +10,11 @@ function App() {
       <Router>
         <Switch>
           <Route path="/search">
-              <h1>This is the search page</h1>
-            </Route>
-            <Route path="/">
-                <Home />          
-              </Route>
+            <SearchPage />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
         </Switch>
       </Router>
     </div>
