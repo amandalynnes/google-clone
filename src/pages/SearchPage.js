@@ -1,21 +1,27 @@
-import React from 'react';
-import './SearchPage.css';
+import React from "react";
+import "./SearchPage.css";
 import { useStateValue } from "../StateProvider";
+import useGoogleSearch from "../useGoogleSearch";
 
 function SearchPage() {
-    const [{ term }, dispatch] = useStateValue();
+  const [{ term }, dispatch] = useStateValue();
+  const { data } = useGoogleSearch(term);
 
-    return (
-        <div className="searchPage">
-            <div className="searchPage_header">
-                <h1>{term}</h1>
-            </div>
+  // // https://developers.google.com/custom-search/v1/using_rest
 
-            <div className="searchPage_results">
+  // https://cse.google.com/cse/create/new
 
-            </div>
-        </div>
-    )
+
+console.log(data)
+  return (
+    <div className="searchPage">
+      <div className="searchPage_header">
+        <h1>{term}</h1>
+      </div>
+
+      <div className="searchPage_results"></div>
+    </div>
+  );
 }
 
-export default SearchPage
+export default SearchPage;
