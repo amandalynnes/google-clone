@@ -5,6 +5,7 @@ import useGoogleSearch from "../useGoogleSearch";
 import Response from "../response";
 import { Link } from "react-router-dom";
 import Search from "../components/Search";
+import SearchIcon from "@material-ui/icons/Search";
 
 
 function SearchPage() {
@@ -29,6 +30,21 @@ function SearchPage() {
 
         <div className="searchPage_headerBody">
           <Search hideButtons />
+
+          <div className="searchPage_options">
+              <div className="searchPage_optionsLeft">
+                  <div className="searchPage_option">
+                    <SearchIcon />
+                    <Link to="/all">All</Link>
+                    </div>
+              </div>
+              <div className="searchPage_optionsRight">
+                  <div className="searchPage_option">
+                    <SearchIcon />
+                    <Link to="/all">All</Link>
+                    </div>
+              </div>
+          </div>
         </div>
       </div>
 
