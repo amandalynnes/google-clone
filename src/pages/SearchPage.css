@@ -38,3 +38,17 @@
     text-decoration: none;
     color: gray;
 }
+
+.searchPage_optionsRight {
+    margin-left: 80px;
+}
+
+.searchPage_option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.searchPage_option a {
+    margin-left: 5px;
+}
