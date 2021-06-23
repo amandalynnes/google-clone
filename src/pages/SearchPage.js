@@ -83,7 +83,13 @@ function SearchPage() {
 
         {data?.items.map(item => (
           <div className="searchPage_result">
-            {item.displayLink}
+            <a href={item.link}>
+            {item.displayLink} 
+            </a>
+            <a className="searchPage_resultTitle" href={item.link}>
+              <h2>{item.title}</h2>
+            </a>
+            <p className="searchPage_resultSnippet">{item.snippet}</p>
           </div>
         ))}
         </div>}
